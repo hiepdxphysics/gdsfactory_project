@@ -1,0 +1,1104 @@
+ports:
+  opt1_00:
+    name: opt1_00
+    width: 0.5
+    midpoint:
+    - -19.2
+    - 313.5
+    orientation: 0.0
+    layer:
+    - 1
+    - 10
+    port_type: optical
+  opt1_01:
+    name: opt1_01
+    width: 0.5
+    midpoint:
+    - -19.2
+    - 186.5
+    orientation: 0.0
+    layer:
+    - 1
+    - 10
+    port_type: optical
+cells:
+  spiral_add_fiber_array__e18438da:
+    name: spiral_add_fiber_array__e18438da
+    module: gdsfactory.dft.siepic
+    function_name: add_fiber_array_siepic
+    info: {}
+    info_version: 2
+    full:
+      component:
+        function: spiral
+      component_name: null
+      gc_port_name: opt1
+      get_input_labels_function:
+        function: get_input_labels
+      with_loopback: false
+      optical_routing_type: 0
+      fanout_length: 0.0
+      grating_coupler: gc_te1550
+      cross_section: strip
+      layer_label:
+      - 10
+      - 0
+    changed:
+      component:
+        function: spiral
+      gc_port_name: opt1
+      grating_coupler: gc_te1550
+    default:
+      component:
+        function: straight
+      component_name: null
+      gc_port_name: o1
+      get_input_labels_function:
+        function: get_input_labels
+      with_loopback: false
+      optical_routing_type: 0
+      fanout_length: 0.0
+      grating_coupler:
+        function: grating_coupler_elliptical_trenches
+        settings:
+          polarization: te
+          taper_angle: 35
+      cross_section: strip
+      layer_label:
+      - 10
+      - 0
+    child:
+      name: spiral_add_fiber_array_2aa5d745
+      module: gdsfactory.routing.add_fiber_array
+      function_name: add_fiber_array
+      info: {}
+      info_version: 2
+      full:
+        component:
+          function: spiral
+        grating_coupler: gc_te1550
+        gc_port_name: opt1
+        gc_port_labels: null
+        component_name: null
+        select_ports:
+          function: select_ports
+          settings:
+            port_type: optical
+        cross_section: strip
+        get_input_labels_function:
+          function: get_input_labels
+        layer_label:
+        - 10
+        - 0
+        with_loopback: false
+        optical_routing_type: 0
+        fanout_length: 0.0
+      changed:
+        component:
+          function: spiral
+        fanout_length: 0.0
+        gc_port_name: opt1
+        grating_coupler: gc_te1550
+        layer_label:
+        - 10
+        - 0
+        optical_routing_type: 0
+        with_loopback: false
+      default:
+        component:
+          function: straight
+        grating_coupler:
+          function: grating_coupler_elliptical_trenches
+          settings:
+            polarization: te
+            taper_angle: 35
+        gc_port_name: o1
+        gc_port_labels: null
+        component_name: null
+        select_ports:
+          function: select_ports
+          settings:
+            port_type: optical
+        cross_section: strip
+        get_input_labels_function:
+          function: get_input_labels
+        layer_label: TEXT
+      child:
+        name: spiral
+        module: gdsfactory.components.spiral
+        function_name: spiral
+        info: {}
+        info_version: 2
+        full:
+          port_spacing: 500.0
+          length: 10000.0
+          spacing: null
+          parity: 1
+          port:
+          - 0
+          - 0
+          direction: WEST
+          waveguide_template:
+            function: strip
+          layer: WG
+          layer_cladding: WGCLAD
+          cladding_offset: 3.0
+          wg_width: 0.5
+          radius: 10.0
+        changed: {}
+        default:
+          port_spacing: 500.0
+          length: 10000.0
+          spacing: null
+          parity: 1
+          port:
+          - 0
+          - 0
+          direction: WEST
+          waveguide_template:
+            function: strip
+          layer: WG
+          layer_cladding: WGCLAD
+          cladding_offset: 3.0
+          wg_width: 0.5
+          radius: 10.0
+        child: null
+  spiral_add_fiber_array_2aa5d745:
+    name: spiral_add_fiber_array_2aa5d745
+    module: gdsfactory.routing.add_fiber_array
+    function_name: add_fiber_array
+    info: {}
+    info_version: 2
+    full:
+      component:
+        function: spiral
+      grating_coupler: gc_te1550
+      gc_port_name: opt1
+      gc_port_labels: null
+      component_name: null
+      select_ports:
+        function: select_ports
+        settings:
+          port_type: optical
+      cross_section: strip
+      get_input_labels_function:
+        function: get_input_labels
+      layer_label:
+      - 10
+      - 0
+      with_loopback: false
+      optical_routing_type: 0
+      fanout_length: 0.0
+    changed:
+      component:
+        function: spiral
+      fanout_length: 0.0
+      gc_port_name: opt1
+      grating_coupler: gc_te1550
+      layer_label:
+      - 10
+      - 0
+      optical_routing_type: 0
+      with_loopback: false
+    default:
+      component:
+        function: straight
+      grating_coupler:
+        function: grating_coupler_elliptical_trenches
+        settings:
+          polarization: te
+          taper_angle: 35
+      gc_port_name: o1
+      gc_port_labels: null
+      component_name: null
+      select_ports:
+        function: select_ports
+        settings:
+          port_type: optical
+      cross_section: strip
+      get_input_labels_function:
+        function: get_input_labels
+      layer_label: TEXT
+    child:
+      name: spiral
+      module: gdsfactory.components.spiral
+      function_name: spiral
+      info: {}
+      info_version: 2
+      full:
+        port_spacing: 500.0
+        length: 10000.0
+        spacing: null
+        parity: 1
+        port:
+        - 0
+        - 0
+        direction: WEST
+        waveguide_template:
+          function: strip
+        layer: WG
+        layer_cladding: WGCLAD
+        cladding_offset: 3.0
+        wg_width: 0.5
+        radius: 10.0
+      changed: {}
+      default:
+        port_spacing: 500.0
+        length: 10000.0
+        spacing: null
+        parity: 1
+        port:
+        - 0
+        - 0
+        direction: WEST
+        waveguide_template:
+          function: strip
+        layer: WG
+        layer_cladding: WGCLAD
+        cladding_offset: 3.0
+        wg_width: 0.5
+        radius: 10.0
+      child: null
+  bend_euler_b64b2f08:
+    name: bend_euler_b64b2f08
+    module: gdsfactory.components.bend_euler
+    function_name: bend_euler
+    info:
+      length: 16.637
+      dy: 10.0
+      radius_min: 7.061
+      radius: 10.0
+      width: 0.5
+      interconnect:
+        model: ebeam_wg_integral_1550
+        layout_model_property_pairs:
+          wg_length:
+          - length
+          - 1.0e-06
+          wg_width:
+          - width
+          - 1.0e-06
+        layout_model_port_pairs:
+          o1: port 1
+          o2: port 2
+        properties:
+          annotate: false
+    info_version: 2
+    full:
+      angle: 90.0
+      p: 0.5
+      with_arc_floorplan: true
+      npoints: 720
+      direction: ccw
+      with_bbox: true
+      cross_section:
+        layer:
+        - 1
+        - 0
+        width: 0.5
+        offset: 0.0
+        radius: 10.0
+        width_wide: null
+        auto_widen: false
+        auto_widen_minimum_length: 200.0
+        taper_length: 10.0
+        bbox_layers: []
+        bbox_offsets: []
+        cladding_layers:
+        - DEVREC
+        cladding_offsets:
+        - 0.0
+        sections: []
+        port_names:
+        - o1
+        - o2
+        port_types:
+        - optical
+        - optical
+        min_length: 0.01
+        start_straight_length: 0.01
+        end_straight_length: 0.01
+        snap_to_grid: null
+        info:
+          interconnect:
+            model: ebeam_wg_integral_1550
+            layout_model_property_pairs:
+              wg_length:
+              - length
+              - 1.0e-06
+              wg_width:
+              - width
+              - 1.0e-06
+            layout_model_port_pairs:
+              o1: port 1
+              o2: port 2
+            properties:
+              annotate: false
+        name: null
+        add_center_section: true
+    changed:
+      cross_section:
+        layer:
+        - 1
+        - 0
+        width: 0.5
+        offset: 0.0
+        radius: 10.0
+        width_wide: null
+        auto_widen: false
+        auto_widen_minimum_length: 200.0
+        taper_length: 10.0
+        bbox_layers: []
+        bbox_offsets: []
+        cladding_layers:
+        - DEVREC
+        cladding_offsets:
+        - 0.0
+        sections: []
+        port_names:
+        - o1
+        - o2
+        port_types:
+        - optical
+        - optical
+        min_length: 0.01
+        start_straight_length: 0.01
+        end_straight_length: 0.01
+        snap_to_grid: null
+        info:
+          interconnect:
+            model: ebeam_wg_integral_1550
+            layout_model_property_pairs:
+              wg_length:
+              - length
+              - 1.0e-06
+              wg_width:
+              - width
+              - 1.0e-06
+            layout_model_port_pairs:
+              o1: port 1
+              o2: port 2
+            properties:
+              annotate: false
+        name: null
+        add_center_section: true
+    default:
+      angle: 90.0
+      p: 0.5
+      with_arc_floorplan: true
+      npoints: 720
+      direction: ccw
+      with_bbox: true
+      cross_section: strip
+    child: null
+  straight_7b3109dc:
+    name: straight_7b3109dc
+    module: gdsfactory.components.straight
+    function_name: straight
+    info:
+      length: 18.39
+      width: 0.5
+      interconnect:
+        model: ebeam_wg_integral_1550
+        layout_model_property_pairs:
+          wg_length:
+          - length
+          - 1.0e-06
+          wg_width:
+          - width
+          - 1.0e-06
+        layout_model_port_pairs:
+          o1: port 1
+          o2: port 2
+        properties:
+          annotate: false
+    info_version: 2
+    full:
+      length: 18.39
+      npoints: 2
+      with_bbox: true
+      cross_section:
+        layer:
+        - 1
+        - 0
+        width: 0.5
+        offset: 0.0
+        radius: 10.0
+        width_wide: null
+        auto_widen: false
+        auto_widen_minimum_length: 200.0
+        taper_length: 10.0
+        bbox_layers: []
+        bbox_offsets: []
+        cladding_layers:
+        - DEVREC
+        cladding_offsets:
+        - 0.0
+        sections: []
+        port_names:
+        - o1
+        - o2
+        port_types:
+        - optical
+        - optical
+        min_length: 0.01
+        start_straight_length: 0.01
+        end_straight_length: 0.01
+        snap_to_grid: null
+        info:
+          interconnect:
+            model: ebeam_wg_integral_1550
+            layout_model_property_pairs:
+              wg_length:
+              - length
+              - 1.0e-06
+              wg_width:
+              - width
+              - 1.0e-06
+            layout_model_port_pairs:
+              o1: port 1
+              o2: port 2
+            properties:
+              annotate: false
+        name: null
+        add_center_section: true
+    changed:
+      cross_section:
+        layer:
+        - 1
+        - 0
+        width: 0.5
+        offset: 0.0
+        radius: 10.0
+        width_wide: null
+        auto_widen: false
+        auto_widen_minimum_length: 200.0
+        taper_length: 10.0
+        bbox_layers: []
+        bbox_offsets: []
+        cladding_layers:
+        - DEVREC
+        cladding_offsets:
+        - 0.0
+        sections: []
+        port_names:
+        - o1
+        - o2
+        port_types:
+        - optical
+        - optical
+        min_length: 0.01
+        start_straight_length: 0.01
+        end_straight_length: 0.01
+        snap_to_grid: null
+        info:
+          interconnect:
+            model: ebeam_wg_integral_1550
+            layout_model_property_pairs:
+              wg_length:
+              - length
+              - 1.0e-06
+              wg_width:
+              - width
+              - 1.0e-06
+            layout_model_port_pairs:
+              o1: port 1
+              o2: port 2
+            properties:
+              annotate: false
+        name: null
+        add_center_section: true
+      length: 18.39
+    default:
+      length: 10.0
+      npoints: 2
+      with_bbox: true
+      cross_section: strip
+    child: null
+  straight_2087e391:
+    name: straight_2087e391
+    module: gdsfactory.components.straight
+    function_name: straight
+    info:
+      length: 196.52
+      width: 0.5
+      interconnect:
+        model: ebeam_wg_integral_1550
+        layout_model_property_pairs:
+          wg_length:
+          - length
+          - 1.0e-06
+          wg_width:
+          - width
+          - 1.0e-06
+        layout_model_port_pairs:
+          o1: port 1
+          o2: port 2
+        properties:
+          annotate: false
+    info_version: 2
+    full:
+      length: 196.52
+      npoints: 2
+      with_bbox: true
+      cross_section:
+        layer:
+        - 1
+        - 0
+        width: 0.5
+        offset: 0.0
+        radius: 10.0
+        width_wide: null
+        auto_widen: false
+        auto_widen_minimum_length: 200.0
+        taper_length: 10.0
+        bbox_layers: []
+        bbox_offsets: []
+        cladding_layers:
+        - DEVREC
+        cladding_offsets:
+        - 0.0
+        sections: []
+        port_names:
+        - o1
+        - o2
+        port_types:
+        - optical
+        - optical
+        min_length: 0.01
+        start_straight_length: 0.01
+        end_straight_length: 0.01
+        snap_to_grid: null
+        info:
+          interconnect:
+            model: ebeam_wg_integral_1550
+            layout_model_property_pairs:
+              wg_length:
+              - length
+              - 1.0e-06
+              wg_width:
+              - width
+              - 1.0e-06
+            layout_model_port_pairs:
+              o1: port 1
+              o2: port 2
+            properties:
+              annotate: false
+        name: null
+        add_center_section: true
+    changed:
+      cross_section:
+        layer:
+        - 1
+        - 0
+        width: 0.5
+        offset: 0.0
+        radius: 10.0
+        width_wide: null
+        auto_widen: false
+        auto_widen_minimum_length: 200.0
+        taper_length: 10.0
+        bbox_layers: []
+        bbox_offsets: []
+        cladding_layers:
+        - DEVREC
+        cladding_offsets:
+        - 0.0
+        sections: []
+        port_names:
+        - o1
+        - o2
+        port_types:
+        - optical
+        - optical
+        min_length: 0.01
+        start_straight_length: 0.01
+        end_straight_length: 0.01
+        snap_to_grid: null
+        info:
+          interconnect:
+            model: ebeam_wg_integral_1550
+            layout_model_property_pairs:
+              wg_length:
+              - length
+              - 1.0e-06
+              wg_width:
+              - width
+              - 1.0e-06
+            layout_model_port_pairs:
+              o1: port 1
+              o2: port 2
+            properties:
+              annotate: false
+        name: null
+        add_center_section: true
+      length: 196.52
+    default:
+      length: 10.0
+      npoints: 2
+      with_bbox: true
+      cross_section: strip
+    child: null
+  straight_bf682edc:
+    name: straight_bf682edc
+    module: gdsfactory.components.straight
+    function_name: straight
+    info:
+      length: 9.2
+      width: 0.5
+      interconnect:
+        model: ebeam_wg_integral_1550
+        layout_model_property_pairs:
+          wg_length:
+          - length
+          - 1.0e-06
+          wg_width:
+          - width
+          - 1.0e-06
+        layout_model_port_pairs:
+          o1: port 1
+          o2: port 2
+        properties:
+          annotate: false
+    info_version: 2
+    full:
+      length: 9.2
+      npoints: 2
+      with_bbox: true
+      cross_section:
+        layer:
+        - 1
+        - 0
+        width: 0.5
+        offset: 0.0
+        radius: 10.0
+        width_wide: null
+        auto_widen: false
+        auto_widen_minimum_length: 200.0
+        taper_length: 10.0
+        bbox_layers: []
+        bbox_offsets: []
+        cladding_layers:
+        - DEVREC
+        cladding_offsets:
+        - 0.0
+        sections: []
+        port_names:
+        - o1
+        - o2
+        port_types:
+        - optical
+        - optical
+        min_length: 0.01
+        start_straight_length: 0.01
+        end_straight_length: 0.01
+        snap_to_grid: null
+        info:
+          interconnect:
+            model: ebeam_wg_integral_1550
+            layout_model_property_pairs:
+              wg_length:
+              - length
+              - 1.0e-06
+              wg_width:
+              - width
+              - 1.0e-06
+            layout_model_port_pairs:
+              o1: port 1
+              o2: port 2
+            properties:
+              annotate: false
+        name: null
+        add_center_section: true
+    changed:
+      cross_section:
+        layer:
+        - 1
+        - 0
+        width: 0.5
+        offset: 0.0
+        radius: 10.0
+        width_wide: null
+        auto_widen: false
+        auto_widen_minimum_length: 200.0
+        taper_length: 10.0
+        bbox_layers: []
+        bbox_offsets: []
+        cladding_layers:
+        - DEVREC
+        cladding_offsets:
+        - 0.0
+        sections: []
+        port_names:
+        - o1
+        - o2
+        port_types:
+        - optical
+        - optical
+        min_length: 0.01
+        start_straight_length: 0.01
+        end_straight_length: 0.01
+        snap_to_grid: null
+        info:
+          interconnect:
+            model: ebeam_wg_integral_1550
+            layout_model_property_pairs:
+              wg_length:
+              - length
+              - 1.0e-06
+              wg_width:
+              - width
+              - 1.0e-06
+            layout_model_port_pairs:
+              o1: port 1
+              o2: port 2
+            properties:
+              annotate: false
+        name: null
+        add_center_section: true
+      length: 9.2
+    default:
+      length: 10.0
+      npoints: 2
+      with_bbox: true
+      cross_section: strip
+    child: null
+  straight_6a7bca88:
+    name: straight_6a7bca88
+    module: gdsfactory.components.straight
+    function_name: straight
+    info:
+      length: 0.01
+      width: 0.5
+      interconnect:
+        model: ebeam_wg_integral_1550
+        layout_model_property_pairs:
+          wg_length:
+          - length
+          - 1.0e-06
+          wg_width:
+          - width
+          - 1.0e-06
+        layout_model_port_pairs:
+          o1: port 1
+          o2: port 2
+        properties:
+          annotate: false
+    info_version: 2
+    full:
+      length: 0.01
+      npoints: 2
+      with_bbox: true
+      cross_section:
+        layer:
+        - 1
+        - 0
+        width: 0.5
+        offset: 0.0
+        radius: 10.0
+        width_wide: null
+        auto_widen: false
+        auto_widen_minimum_length: 200.0
+        taper_length: 10.0
+        bbox_layers: []
+        bbox_offsets: []
+        cladding_layers:
+        - DEVREC
+        cladding_offsets:
+        - 0.0
+        sections: []
+        port_names:
+        - o1
+        - o2
+        port_types:
+        - optical
+        - optical
+        min_length: 0.01
+        start_straight_length: 0.01
+        end_straight_length: 0.01
+        snap_to_grid: null
+        info:
+          interconnect:
+            model: ebeam_wg_integral_1550
+            layout_model_property_pairs:
+              wg_length:
+              - length
+              - 1.0e-06
+              wg_width:
+              - width
+              - 1.0e-06
+            layout_model_port_pairs:
+              o1: port 1
+              o2: port 2
+            properties:
+              annotate: false
+        name: null
+        add_center_section: true
+    changed:
+      cross_section:
+        layer:
+        - 1
+        - 0
+        width: 0.5
+        offset: 0.0
+        radius: 10.0
+        width_wide: null
+        auto_widen: false
+        auto_widen_minimum_length: 200.0
+        taper_length: 10.0
+        bbox_layers: []
+        bbox_offsets: []
+        cladding_layers:
+        - DEVREC
+        cladding_offsets:
+        - 0.0
+        sections: []
+        port_names:
+        - o1
+        - o2
+        port_types:
+        - optical
+        - optical
+        min_length: 0.01
+        start_straight_length: 0.01
+        end_straight_length: 0.01
+        snap_to_grid: null
+        info:
+          interconnect:
+            model: ebeam_wg_integral_1550
+            layout_model_property_pairs:
+              wg_length:
+              - length
+              - 1.0e-06
+              wg_width:
+              - width
+              - 1.0e-06
+            layout_model_port_pairs:
+              o1: port 1
+              o2: port 2
+            properties:
+              annotate: false
+        name: null
+        add_center_section: true
+      length: 0.01
+    default:
+      length: 10.0
+      npoints: 2
+      with_bbox: true
+      cross_section: strip
+    child: null
+  rotate_4953e822:
+    name: rotate_4953e822
+    module: gdsfactory.functions
+    function_name: rotate
+    info:
+      polarization: te
+      wavelength: 1.55
+      interconnect:
+        model: ebeam_gc_te1550
+        library: Design kits/ebeam
+        layout_model_port_pairs:
+          opt1: opt_wg
+    info_version: 2
+    full:
+      angle: 180
+      recenter: false
+      component:
+        name: ebeam_gc_te1550
+        version: 0.0.1
+        settings: {}
+    changed:
+      angle: 180
+      component:
+        name: ebeam_gc_te1550
+        version: 0.0.1
+        settings: {}
+    default:
+      angle: 90
+      recenter: false
+    child: {}
+  ebeam_gc_te1550: {}
+  TE1550_SubGC_neg31_oxide: {}
+  spiral:
+    name: spiral
+    module: gdsfactory.components.spiral
+    function_name: spiral
+    info: {}
+    info_version: 2
+    full:
+      port_spacing: 500.0
+      length: 10000.0
+      spacing: null
+      parity: 1
+      port:
+      - 0
+      - 0
+      direction: WEST
+      waveguide_template:
+        function: strip
+      layer: WG
+      layer_cladding: WGCLAD
+      cladding_offset: 3.0
+      wg_width: 0.5
+      radius: 10.0
+    changed: {}
+    default:
+      port_spacing: 500.0
+      length: 10000.0
+      spacing: null
+      parity: 1
+      port:
+      - 0
+      - 0
+      direction: WEST
+      waveguide_template:
+        function: strip
+      layer: WG
+      layer_cladding: WGCLAD
+      cladding_offset: 3.0
+      wg_width: 0.5
+      radius: 10.0
+    child: null
+name: spiral_add_fiber_array__e18438da
+version: 0.0.1
+settings:
+  name: spiral_add_fiber_array__e18438da
+  module: gdsfactory.dft.siepic
+  function_name: add_fiber_array_siepic
+  info: {}
+  info_version: 2
+  full:
+    component:
+      function: spiral
+    component_name: null
+    gc_port_name: opt1
+    get_input_labels_function:
+      function: get_input_labels
+    with_loopback: false
+    optical_routing_type: 0
+    fanout_length: 0.0
+    grating_coupler: gc_te1550
+    cross_section: strip
+    layer_label:
+    - 10
+    - 0
+  changed:
+    component:
+      function: spiral
+    gc_port_name: opt1
+    grating_coupler: gc_te1550
+  default:
+    component:
+      function: straight
+    component_name: null
+    gc_port_name: o1
+    get_input_labels_function:
+      function: get_input_labels
+    with_loopback: false
+    optical_routing_type: 0
+    fanout_length: 0.0
+    grating_coupler:
+      function: grating_coupler_elliptical_trenches
+      settings:
+        polarization: te
+        taper_angle: 35
+    cross_section: strip
+    layer_label:
+    - 10
+    - 0
+  child:
+    name: spiral_add_fiber_array_2aa5d745
+    module: gdsfactory.routing.add_fiber_array
+    function_name: add_fiber_array
+    info: {}
+    info_version: 2
+    full:
+      component:
+        function: spiral
+      grating_coupler: gc_te1550
+      gc_port_name: opt1
+      gc_port_labels: null
+      component_name: null
+      select_ports:
+        function: select_ports
+        settings:
+          port_type: optical
+      cross_section: strip
+      get_input_labels_function:
+        function: get_input_labels
+      layer_label:
+      - 10
+      - 0
+      with_loopback: false
+      optical_routing_type: 0
+      fanout_length: 0.0
+    changed:
+      component:
+        function: spiral
+      fanout_length: 0.0
+      gc_port_name: opt1
+      grating_coupler: gc_te1550
+      layer_label:
+      - 10
+      - 0
+      optical_routing_type: 0
+      with_loopback: false
+    default:
+      component:
+        function: straight
+      grating_coupler:
+        function: grating_coupler_elliptical_trenches
+        settings:
+          polarization: te
+          taper_angle: 35
+      gc_port_name: o1
+      gc_port_labels: null
+      component_name: null
+      select_ports:
+        function: select_ports
+        settings:
+          port_type: optical
+      cross_section: strip
+      get_input_labels_function:
+        function: get_input_labels
+      layer_label: TEXT
+    child:
+      name: spiral
+      module: gdsfactory.components.spiral
+      function_name: spiral
+      info: {}
+      info_version: 2
+      full:
+        port_spacing: 500.0
+        length: 10000.0
+        spacing: null
+        parity: 1
+        port:
+        - 0
+        - 0
+        direction: WEST
+        waveguide_template:
+          function: strip
+        layer: WG
+        layer_cladding: WGCLAD
+        cladding_offset: 3.0
+        wg_width: 0.5
+        radius: 10.0
+      changed: {}
+      default:
+        port_spacing: 500.0
+        length: 10000.0
+        spacing: null
+        parity: 1
+        port:
+        - 0
+        - 0
+        direction: WEST
+        waveguide_template:
+          function: strip
+        layer: WG
+        layer_cladding: WGCLAD
+        cladding_offset: 3.0
+        wg_width: 0.5
+        radius: 10.0
+      child: null
